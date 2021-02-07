@@ -13,7 +13,7 @@
     <div class="inner">
       <div class="content">
         <h1>women's job center online</h1>
-        <a href="#" class="btn">Get Started</a>
+        <a href="admin.php" class="btn">Get Started</a>
       </div>
     </div>
   </section>
