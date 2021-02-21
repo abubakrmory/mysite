@@ -13,7 +13,7 @@
        <div id="navbar" class="collapse navbar-collapse">
          <ul class="nav navbar-nav">
            <li><a href="index.php">Company</a></li>
-           <li><a href="#">Manage Offers</a></li>
+           <li><a href="manage.php">Manage Offers</a></li>
            <li><a href="#">Update Profile</a></li>
 
          </ul>

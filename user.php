@@ -3,6 +3,7 @@ require_once "header.php";
 require_once "navbar.php";
 require_once "conn.php";
 session_start();
+
 if (isset($_POST['username']) || isset($_POST['password'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -17,6 +18,7 @@ if (isset($_POST['username']) || isset($_POST['password'])) {
         $message = "Please check username and password";
         echo "<script type='text/javascript'>alert('$message');</script>";
     }
+
 }
 ?>
 
