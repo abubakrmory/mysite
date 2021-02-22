@@ -46,10 +46,10 @@ while ($obj = mysqli_fetch_object($result)): $R = $R + 1;?>
         <td><?php echo $obj->Title; ?></td>
         <td><?php echo $obj->Date; ?></td>
         <td><?php echo $obj->Qualifications; ?></td>
-        <td><?php echo $obj->Experience; ?></td>
-        <td><?php echo $obj->Salary; ?></td>
-        <td><?php echo $obj->WorkDays; ?></td>
-        <td><?php echo $obj->WorkHours; ?></td>
+        <td><?php echo $obj->Experience . ' Years'; ?></td>
+        <td><?php echo $obj->Salary . ' Sar'; ?></td>
+        <td><?php echo $obj->WorkDays . ' Days'; ?></td>
+        <td><?php echo $obj->WorkHours . ' Hours'; ?></td>
         <td><?php echo $obj->Description; ?></td>
         <td>
           <a href="editoffer.php?OfferId=<?=$obj->OfferId?>" class="btn btn-warning"> <i class="far fa-edit fa-lg"></i>

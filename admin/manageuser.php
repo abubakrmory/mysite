@@ -3,8 +3,8 @@ include 'header.php';
 include 'navbar.php';
 include 'conn.php';
 if (isset($_POST['submit'])) {
-    $CompanyId = $_POST['CompanyId'];
-    $sql = "DELETE FROM company  WHERE CompanyId=$CompanyId";
+    $UserId = $_POST['UserId'];
+    $sql = "DELETE FROM user  WHERE UserId=$UserId";
     if ($con->query($sql) === true) {
         $message = "it is deleted successfully..";
         echo "<script type='text/javascript'>alert('$message');</script>";
@@ -47,17 +47,16 @@ while ($obj = mysqli_fetch_object($result)): $R = $R + 1;?>
         <td><?php echo $obj->Phone; ?></td>
         <td><?php echo $obj->Email; ?></td>
         <td><?php echo $obj->Qualifications; ?></td>
-        <td><?php echo $obj->Experience; ?></td>
+        <td><?php echo $obj->Experience . ' Years'; ?></td>
         <td><?php echo $obj->Username; ?></td>
         <td><?php echo $obj->Password; ?></td>
         <td>
-          <a href="editcompany.php?CompanyId=<?=$obj->CompanyId?>" class="btn btn-warning"> <i
-              class="far fa-edit fa-lg"></i>
+          <a href="edituser.php?UserId=<?=$obj->UserId?>" class="btn btn-warning"> <i class="far fa-edit fa-lg"></i>
             Edit </a>
         </td>
         <td>
           <form action="" method="POST">
-            <input type="hidden" name="CompanyId" value="<?=$obj->CompanyId?>" class="form-control" required
+            <input type="hidden" name="UserId" value="<?=$obj->UserId?>" class="form-control" required
               autocomplete="off">
             <button type="submit" name="submit" class="btn btn-danger"><i
                 class="fa fa-trash-alt fa-lg  float-right"></i> Delete</button>

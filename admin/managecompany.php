@@ -38,29 +38,29 @@ $sql = "select * from company ";
 $result = mysqli_query($con, $sql);
 $R = 0;
 while ($obj = mysqli_fetch_object($result)): $R = $R + 1;?>
-      <tr>
-        <td><?php echo $R; ?></td>
-        <td><?php echo $obj->Name; ?></td>
-        <td><?php echo $obj->Phone; ?></td>
-        <td><?php echo $obj->Address; ?></td>
-        <td><?php echo $obj->Email; ?></td>
-        <td><?php echo $obj->Username; ?></td>
-        <td><?php echo $obj->Password; ?></td>
-        <td>
-          <a href="editcompany.php?CompanyId=<?=$obj->CompanyId?>" class="btn btn-warning"> <i
-              class="far fa-edit fa-lg"></i>
-            Edit </a>
-        </td>
-        <td>
-          <form action="" method="POST">
-            <input type="hidden" name="CompanyId" value="<?=$obj->CompanyId?>" class="form-control" required
-              autocomplete="off">
-            <button type="submit" name="submit" class="btn btn-danger"><i
-                class="fa fa-trash-alt fa-lg  float-right"></i> Delete</button>
-          </form>
-        </td>
-      </tr>
-      <?php endwhile?>
+	      <tr>
+	        <td><?php echo $R; ?></td>
+	        <td><?php echo $obj->Name; ?></td>
+	        <td><?php echo $obj->Phone; ?></td>
+	        <td><?php echo $obj->Address; ?></td>
+	        <td><?php echo $obj->Email; ?></td>
+	        <td><?php echo $obj->Username; ?></td>
+	        <td><?php echo $obj->Password; ?></td>
+	        <td>
+	          <a href="editcompany.php?CompanyId=<?=$obj->CompanyId?>" class="btn btn-warning"> <i
+	              class="far fa-edit fa-lg"></i>
+	            Edit </a>
+	        </td>
+	        <td>
+	          <form action="" method="POST">
+	            <input type="hidden" name="CompanyId" value="<?=$obj->CompanyId?>" class="form-control" required
+	              autocomplete="off">
+	            <button type="submit" name="submit" class="btn btn-danger"><i
+	                class="fa fa-trash-alt fa-lg  float-right"></i> Delete</button>
+	          </form>
+	        </td>
+	      </tr>
+	      <?php endwhile?>
     </tbody>
   </table>
 </div> <!-- container -->
