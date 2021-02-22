@@ -3,8 +3,8 @@ include 'header.php';
 include 'navbar.php';
 include 'conn.php';
 if (isset($_POST['submit'])) {
-    $OfferId = $_POST['OfferId'];
-    $sql = "DELETE FROM offers  WHERE OfferId=$OfferId";
+    $CompanyId = $_POST['CompanyId'];
+    $sql = "DELETE FROM company  WHERE CompanyId=$CompanyId";
     if ($con->query($sql) === true) {
         $message = "it is deleted successfully..";
         echo "<script type='text/javascript'>alert('$message');</script>";
@@ -14,22 +14,21 @@ if (isset($_POST['submit'])) {
 }
 ?>
 <div class="container" style="margin-top: 50px;">
-  <h1 class="text-center">Manage Offers</h1>
-  <a href="newoffer.php" class="btn btn-success pull-right"> <i class="fas fa-plus fa-lg"></i> Add New</a>
+  <h1 class="text-center">Manage User Account</h1>
   <br />
   <br />
   <table class="table table-striped table-hover table-bordered border-primary">
     <thead class="border bottom font-weight:bold bg-info text-center">
       <tr>
         <td>#</td>
-        <td>Title</td>
-        <td>Date</td>
+        <td>Name</td>
+        <td>Gender</td>
+        <td>Phone</td>
+        <td>Email</td>
         <td>Qualifications</td>
         <td>Experience</td>
-        <td>Salary</td>
-        <td>Work Days</td>
-        <td>Work Hours</td>
-        <td>Description</td>
+        <td>Username</td>
+        <td>Password</td>
         <td colspan="2">
           Action
         </td>
@@ -37,27 +36,28 @@ if (isset($_POST['submit'])) {
     </thead>
     <tbody>
       <?php
-$sql = "select * from offers where CompanyId=" . $_SESSION['CompanyId'];
+$sql = "select * from user ";
 $result = mysqli_query($con, $sql);
 $R = 0;
 while ($obj = mysqli_fetch_object($result)): $R = $R + 1;?>
       <tr>
         <td><?php echo $R; ?></td>
-        <td><?php echo $obj->Title; ?></td>
-        <td><?php echo $obj->Date; ?></td>
+        <td><?php echo $obj->Name; ?></td>
+        <td><?php echo $obj->Gender; ?></td>
+        <td><?php echo $obj->Phone; ?></td>
+        <td><?php echo $obj->Email; ?></td>
         <td><?php echo $obj->Qualifications; ?></td>
         <td><?php echo $obj->Experience; ?></td>
-        <td><?php echo $obj->Salary; ?></td>
-        <td><?php echo $obj->WorkDays; ?></td>
-        <td><?php echo $obj->WorkHours; ?></td>
-        <td><?php echo $obj->Description; ?></td>
+        <td><?php echo $obj->Username; ?></td>
+        <td><?php echo $obj->Password; ?></td>
         <td>
-          <a href="editoffer.php?OfferId=<?=$obj->OfferId?>" class="btn btn-warning"> <i class="far fa-edit fa-lg"></i>
+          <a href="editcompany.php?CompanyId=<?=$obj->CompanyId?>" class="btn btn-warning"> <i
+              class="far fa-edit fa-lg"></i>
             Edit </a>
         </td>
         <td>
           <form action="" method="POST">
-            <input type="hidden" name="OfferId" value="<?=$obj->OfferId?>" class="form-control" required
+            <input type="hidden" name="CompanyId" value="<?=$obj->CompanyId?>" class="form-control" required
               autocomplete="off">
             <button type="submit" name="submit" class="btn btn-danger"><i
                 class="fa fa-trash-alt fa-lg  float-right"></i> Delete</button>

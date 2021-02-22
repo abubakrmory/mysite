@@ -9,7 +9,7 @@ if (isset($_POST['username']) || isset($_POST['password'])) {
     $sql = "select * from company where username='{$username}' and password='{$password}'";
     if ($result = mysqli_query($con, $sql)) {
         while ($obj = mysqli_fetch_object($result)) {
-            $_SESSION['id'] = $obj->id;
+            $_SESSION['CompanyId'] = $obj->CompanyId;
             $_SESSION['name'] = $obj->name;
             $_SESSION['loggedin'] = true;
             header("Location: company/index.php");

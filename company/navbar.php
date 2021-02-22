@@ -14,8 +14,7 @@
          <ul class="nav navbar-nav">
            <li><a href="index.php">Company</a></li>
            <li><a href="manage.php">Manage Offers</a></li>
-           <li><a href="#">Update Profile</a></li>
-
+           <li><a href="profile.php">Update Profile</a></li>
          </ul>
          <ul class="nav navbar-nav navbar-right">
            <li><a href="../logout.php">Logout</a></li>

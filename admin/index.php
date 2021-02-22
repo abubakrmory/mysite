@@ -8,7 +8,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == false) {
 }
 ?>
 <div class="container-fluid mt-2">
-
+  <h1>Welcome Administrator</h1>
 
 </div>
 

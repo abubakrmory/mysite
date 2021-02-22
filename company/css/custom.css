@@ -1,17 +1,15 @@
-
-body{
-  background:#ddd; 
+body {
+  background: #ddd;
 }
-p{
-    font-size: 14pt;
-    
+p {
+  font-size: 14pt;
 }
 footer {
-    margin-top: 5px;
-    background-color :#000;
-    padding: 5px;
+  margin-top: 5px;
+  background-color: #000;
+  padding: 5px;
 }
 .well {
-  background: rgb(223,240,216);
+  background: rgb(223, 240, 216);
   padding-top: 0px;
 }

@@ -13,9 +13,9 @@
        <div id="navbar" class="collapse navbar-collapse">
          <ul class="nav navbar-nav">
            <li><a href="index.php">Admin</a></li>
-           <li><a href="#">Manage Company Account</a></li>
-           <li><a href="#">Manage User Account</a></li>
-           <li><a href="#">View Offers</a></li>
+           <li><a href="managecompany.php">Manage Company Account</a></li>
+           <li><a href="manageuser.php">Manage User Account</a></li>
+           <li><a href="offers.php">View Offers</a></li>
 
          </ul>
          <ul class="nav navbar-nav navbar-right">

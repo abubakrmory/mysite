@@ -13,8 +13,8 @@
        <div id="navbar" class="collapse navbar-collapse">
          <ul class="nav navbar-nav">
            <li><a href="index.php">User</a></li>
-           <li><a href="#">View Offers</a></li>
-           <li><a href="#">Update Profile</a></li>
+           <li><a href="offers.php">View Offers</a></li>
+           <li><a href="profile.php">Update Profile</a></li>
 
          </ul>
          <ul class="nav navbar-nav navbar-right">
